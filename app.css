@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  width: 98vw;
+  height: 98vw;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  justify-items: center;
+  align-content: center;
+}
+
+.children {
+  width: calc(90vw/16);
+  height: calc(90vw/16);
+  background-color: turquoise;
+  border: 2px solid navy;
+  transition: all 0.05s;
+}
+
+.long-trans {
+  transition: all 1.5s;
+}
