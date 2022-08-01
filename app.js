@@ -1,9 +1,18 @@
+const btn = document.querySelector('#grid-size');
 const container = document.querySelector('.container');
-for (let i = 0; i < 16 ** 2; i++) {
-  let div = document.createElement('div');
-  div.classList.add('children', 'long-trans');
-  container.appendChild(div);
-}
+
+btn.addEventListener('click', e => {
+  const size = prompt('Enter grid side length: ');
+
+  for (let i = 0; i < size ** 2; i++) {
+    let div = document.createElement('div');
+    div.classList.add('children', 'long-trans');
+    div.style.width = `calc(98vw/${size})`;
+    div.style.height = `calc(98vw/${size})`;
+    container.appendChild(div);
+  }
+})
+
 
 const squares = document.querySelectorAll('div.children');
 
